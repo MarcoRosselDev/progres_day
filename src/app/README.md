@@ -32,4 +32,5 @@ pg_dump -U <nombre_de_usuario> -W -h <puerto_de_host> <nombre_db_x> > <ruta_outp
 pg_dump -U postgres -W -h localhost postgres>c:\backup_db.sql
 # falto el -p 5001 que espesifica el puerto si es que estamos trabajando con el por defecto = 5432
 pg_dump -U postgres -W -h localhost -p 5001 postgres > c:\backup_db.sql
+pg_dump -U postgres -W -h localhost -p 5001 di > c:\backup_di_db.sql
 ```
