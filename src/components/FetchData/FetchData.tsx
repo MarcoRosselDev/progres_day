@@ -1,16 +1,34 @@
-import sql, { data } from "@/sql/db/db"
+import sql from "@/sql/db"
+import styles from "./fechData.module.css";
 
 const FetchData = async () => {
 
-  console.log(sql, data);
-  
-  //const data = await sql`SELECT * FROM day`
+  async function data() {
+    try {
+      const d = await sql`select * from day;`
+      return d      
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
-  //const els = data.map(item => (<p key={item.id}>{item.fecha}</p>))
+  const obj = await data()
+
 
   return (
     <div>
-      <p>Hi</p>
+      {
+        obj?.map(item => {
+          return (
+            <div key={item.id} className={styles.main_div}>
+              <p>fecha: {item.fecha.toString()}</p>
+              <p>horas de estudio: {item.h_study}</p>
+              <p>horas trabajadas: {item.h_work}</p>
+              <p>kilometros corridos: {item.km_run}</p>
+            </div>
+          )
+        })
+      }
     </div>
   )
 }
