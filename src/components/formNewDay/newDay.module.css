@@ -1,0 +1,7 @@
+.new_day_form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 2px solid lightblue;
+  padding: 5px;
+}
