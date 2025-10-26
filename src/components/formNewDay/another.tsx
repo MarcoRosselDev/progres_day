@@ -1,8 +1,6 @@
-"use client"
-
 import { useState, type FormEvent } from "react"
 
-export default function NewDayForm() {
+export default function Form_controlado() {
 
 // Estado para saber si el usuario ya interactuó con cada campo
 const [touched, setTouched] = useState({
