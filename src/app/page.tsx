@@ -1,8 +1,8 @@
 //import Card from "@/components/card/Card";
 //import FetchData from "@/components/FetchData/FetchData";
+//import FromReminder from "@/components/formReminder/FromReminder";
 import NewDayForm from "@/components/formNewDay/NewDayForm";
 import styles from "./page.module.css";
-import FromReminder from "@/components/formReminder/FromReminder";
 
 export default function Home() {
 
@@ -12,7 +12,8 @@ export default function Home() {
         <p>futuro header var</p>
       </header>
       <NewDayForm />
-      <FromReminder />
+
+      {/* <FromReminder /> */}
       {/* <FetchData /> */}
     </div>
   );
