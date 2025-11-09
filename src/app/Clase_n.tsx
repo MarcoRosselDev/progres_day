@@ -1,32 +1,23 @@
+"use client"
+import { FormEvent, useRef } from "react"
+
 const Clase_n = () => {
 
-  const my_object = [
-    {nombre: "A", id:1},
-    {nombre: "B", id:2},
-    {nombre: "C", id:3},
-  ]
+  const input = useRef(null)
 
-
+  function handleSubmit(event:FormEvent) {
+    event.preventDefault();
+    console.log("whe're going to see te information on the form");
+  }
 
   return (
     <div>
-      <ul>
-        {
-          my_object.map(item => (<MyComponent key={item.id} name={item.nombre} />))
-}
-      </ul>
+      <h1>Formulario no controlado</h1>
+      <form onSubmit={handleSubmit}>
+        <input className="form-control" ref={input} type="text" />
+        <button className="btn btn-success">submit</button>
+      </form>
     </div>
   )
 }
 export default Clase_n
-
-type My_local_type = {
-  name: string
-}
-
-function MyComponent({name}: My_local_type) {
-  return (
-    <li>
-      {name}
-    </li>)
-}
